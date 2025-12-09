@@ -1,3 +1,49 @@
-body{
-    
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Align Content Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            align-content: center; /* main property */
+        }
+
+        .box {
+            width: 80px;
+            height: 50px;
+            margin: 5px;
+            background-color: lightcoral;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+</body>
+</html>
