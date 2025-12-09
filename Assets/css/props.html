@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Css Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            height: 100vh;
+            background-color: #dbd2e1;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 300px;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+        }
+
+        .flex-item {
+            background-color: #f08080;
+            color: #ffffff;
+            padding: 20px;
+            margin: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .reset-style {
+            all: initial;
+            padding: 0;
+            border: none;
+            background: none;
+            color: #000000;
+        }
+
+        .text {
+            appearance: none;
+        }
+
+        .image-box {
+            width: 300px;
+            aspect-ratio: 25 / 12;
+            border: 2px solid #333;
+            overflow: hidden;
+        }
+
+        .bg-box {
+            width: 400px;
+            height: 250px;
+            margin: 100px auto;
+            color: #ffffff;
+            font-size: 18px;
+            align-items: center;
+            background-image: url("../images/common/flower.jpg");
+            background: content-box radial-gradient();
+            background-position: right;
+        }
+
+        .content {
+            height: 2000px;
+            padding: 40px;
+            background-color: #ffffffd9;
+        }
+
+        .bg-scroll {
+            background-image: url("../images/common/rose.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 400px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #000000;
+            background: linear-gradient(#157fdb, #00ff1a);
+            background-clip: border-box;
+            margin-bottom: 20px;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 5px solid #000000;
+            background: linear-gradient(#008000, #0000ff);
+            background-clip: padding-box;
+            margin-bottom: 20px;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #000000;
+            background: linear-gradient(#093353, #ffc0cb);
+            background-clip: content-box;
+            margin-bottom: 20px;
+        }
+
+        .background-example {
+            width: 160px;
+            height: 70px;
+            background-image: url("../images/common/sun.jpg");
+            margin-bottom: 12px;
+        }
+
+        .background-three {
+            background-repeat: repeat-x;
+        }
+
+        .background-four {
+            background-repeat: repeat-y;
+        }
+
+        .background-six {
+            background-repeat: round;
+        }
+
+        .content-box {
+            column-count: 4;
+        }
+        blockquote {
+            direction: rtl;
+            width: 300px;
+        }
+        .cursor-section 
+        {
+         margin: 40px 0;
+        }
+
+        .cursor-box {
+        width: 250px;
+        height: 80px;
+        border: 2px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        }
+        .cursor-zoom-in {
+        cursor: zoom-in;
+        }
+        .cursor-zoom-out {
+        cursor: zoom-out;
+        }
+        .cursor-wait {
+        cursor: wait;
+        }
+
+        .cursor-not-allowed {
+        cursor: not-allowed;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>space-between</h1>
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+    </div>
+
+    <p>
+        <label>
+            Enter a number:
+            <input type="number" min="0" max="10" />
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Enter a number:
+            <input type="number" min="0" max="10" class="text" />
+        </label>
+    </p>
+
+    <div class="image-box">
+        <img src="../images/common/flower.jpg" alt="Flower Image" />
+    </div>
+
+    <div class="bg-box">
+        Picture moved to left
+    </div>
+
+    <div class="content">
+        <h1>Background Attachment: Scroll</h1>
+
+        <p>The background image scrolls along with the page content.</p>
+        <p>Keep scrolling to observe the effect.</p>
+
+        <div class="bg-scroll">
+            London. Michaelmas term lately over, and the Lord Chancellor sitting in
+            Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+            as if the waters had but newly retired from the face of the earth.
+        </div>
+
+        <br>
+
+        <div class="box1">Border Box</div>
+        <div class="box2">Padding Box</div>
+        <div class="box3">Content Box</div>
+
+        <div class="background-example background-three">Repeat-X</div>
+        <div class="background-example background-four">Repeat-Y</div>
+        <div class="background-example background-six">Round</div>
+
+        <p class="content-box">
+            Space is vast and mostly empty. The observable universe is estimated to be
+            about 93 billion light-years in diameter. Stars are born in clouds of gas
+            and dust called nebulae. Our solar system is just one of billions in the
+            Milky Way galaxy. Black holes are regions where gravity is so strong that
+            even light cannot escape. Planets orbit stars, and moons orbit planets.
+            Galaxies collide and merge over billions of years, creating new stars.
+        </p>
+        <blockquote>
+      <p> Life is like riding a bicycle. To keep your balance, you must keep moving.</p>
+         </blockquote>
+        </div>
+        <div class="cursor-section">
+        <h1>Cursor Properties</h1>
+        <div class="cursor-box cursor-zoom-in">
+        Hover here – Zoom In Cursor
+        </div>
+        <div class="cursor-box cursor-zoom-out">
+        Hover here – Zoom Out Cursor
+    </div>
+</div>
+ </body>
+</html>
